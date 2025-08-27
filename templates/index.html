@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ポモドーロタイマー</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ポモドーロタイマー</h1>
+        <div class="timer-area">
+            <div class="timer-circle">
+                <!-- 仮の円グラフ（静的SVG） -->
+                <svg width="180" height="180">
+                    <circle cx="90" cy="90" r="80" stroke="#e5e7eb" stroke-width="16" fill="none" />
+                    <circle cx="90" cy="90" r="80" stroke="#7b83eb" stroke-width="16" fill="none" stroke-dasharray="400" stroke-dashoffset="0" />
+                </svg>
+                <div class="timer-text" id="timer-text">25:00</div>
+            </div>
+            <div class="timer-buttons">
+                <button id="start-btn">開始</button>
+                <button id="reset-btn">リセット</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/timer.js"></script>
+</body>
+</html>
