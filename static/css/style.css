@@ -21,6 +21,16 @@ h1 {
 .timer-area {
     text-align: center;
 }
+.work-state {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #7b83eb;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    background: rgba(123, 131, 235, 0.1);
+    border-radius: 16px;
+    display: inline-block;
+}
 .timer-circle {
     position: relative;
     display: inline-block;

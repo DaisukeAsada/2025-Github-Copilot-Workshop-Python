@@ -9,11 +9,12 @@
     <div class="container">
         <h1>ポモドーロタイマー</h1>
         <div class="timer-area">
+            <div class="work-state" id="work-state">作業中</div>
             <div class="timer-circle">
-                <!-- 仮の円グラフ（静的SVG） -->
+                <!-- 動的な円グラフ（SVG） -->
                 <svg width="180" height="180">
                     <circle cx="90" cy="90" r="80" stroke="#e5e7eb" stroke-width="16" fill="none" />
-                    <circle cx="90" cy="90" r="80" stroke="#7b83eb" stroke-width="16" fill="none" stroke-dasharray="400" stroke-dashoffset="0" />
+                    <circle id="progress-circle" cx="90" cy="90" r="80" stroke="#7b83eb" stroke-width="16" fill="none" stroke-dasharray="502.65" stroke-dashoffset="502.65" transform="rotate(-90 90 90)" />
                 </svg>
                 <div class="timer-text" id="timer-text">25:00</div>
             </div>
