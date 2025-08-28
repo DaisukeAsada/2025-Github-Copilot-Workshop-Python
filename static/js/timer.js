@@ -4,8 +4,10 @@ let timerInterval = null;
 let isRunning = false;
 let isWorkSession = true; // 作業セッション（true）か休憩セッション（false）か
 
-// 円の周囲の長さ（2πr, r=80）
-const circleCircumference = 2 * Math.PI * 80;
+// 円の半径
+const CIRCLE_RADIUS = 80;
+// 円の周囲の長さ（2πr）
+const circleCircumference = 2 * Math.PI * CIRCLE_RADIUS;
 
 function updateTimerDisplay() {
     const min = String(Math.floor(timer / 60)).padStart(2, '0');
