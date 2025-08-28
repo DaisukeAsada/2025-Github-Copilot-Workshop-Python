@@ -40,11 +40,15 @@ function updateWorkState() {
     }
 }
 
-function showCompletionNotification() {
+async function showCompletionNotification() {
     // 音による通知（ブラウザの標準音）
     try {
         // シンプルなビープ音を作成
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        // Handle suspended state due to autoplay policy
+        if (audioContext.state === "suspended") {
+            await audioContext.resume();
+        }
         const oscillator = audioContext.createOscillator();
         const gainNode = audioContext.createGain();
         
